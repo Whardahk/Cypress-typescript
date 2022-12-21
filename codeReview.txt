@@ -1,0 +1,21 @@
+Autonation Testing : Saucelabs
+Language used : typescript
+Framework used: cypress
+How to run: 
+  1. npx cypress open -> will open new window browser and running the automation test
+  2. npx cypress run  -> will running the automation test in terminal
+
+After run with 'npx cypress open' -> need to change the directory due to migration to e2e testing based on cypress recommendation
+
+Code Review:
+Focus on the cypress/e2e/*.cy.ts
+i.e: login.cy.ts
+  create class and got the variable from the pages folder.
+  i.e:let loginPage = new LoginPage(); - loginPage is from "./pages/login_pages.cy";
+on the it function "Test LOGIN", it called the class loginPage 
+  and the method called are login and assertLogin
+on the method 'login' it have 3 parameters (URL, username, password) it used for everytime user login
+on the method 'assertLogin' it doen't have parameters but it will assert the data after login successfuly and the data are:
+  - assert get class title and should be visible
+  - assert get class peek and should be visible
+  - assert text should have 'Products' on the page
