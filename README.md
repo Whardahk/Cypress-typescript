@@ -26,6 +26,6 @@ npx cypress open
 
 #### Documentations
 
-Code Review: [CodeReview]](Cypress-typescript/tree/master/codeReview.txt)
+Code Review: [CodeReview]](Cypress-typescript/blob/master/codeReview.txt)
 
 Test case: https://docs.google.com/spreadsheets/d/1YRc8k2mV8VwMzcXgp1RFAUKBV1LQ1kzON8S9E_JaGss/edit?usp=sharing
