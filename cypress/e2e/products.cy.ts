@@ -11,7 +11,10 @@ it("Test Sauce Demo Sauce labs sorting products", () => {
 
   //Sorting Name A to Z
   dashboardPage.sorting("az");
+  //Sorting Name Z to A
   dashboardPage.sorting("za");
-  // dashboardPage.sorting("lohi");
-  // dashboardPage.sorting("hilo");
+  //Sorting Price low to High
+  dashboardPage.sorting("lohi");
+  //Sorting Price High to Low
+  dashboardPage.sorting("hilo");
 });

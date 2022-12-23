@@ -5,10 +5,16 @@ export class DashboardPage {
 
   //Sorting
   selectType = ".product_sort_container";
+  //By Name
   firstColumn =
     "#inventory_container > div > div:nth-child(1) > div.inventory_item_description > div.inventory_item_label";
   lastColumn =
     "#inventory_container > div > div:nth-child(6) > div.inventory_item_description > div.inventory_item_label";
+  //By Price
+  loColumn =
+    "#inventory_container > div > div:nth-child(1) > div.inventory_item_description > div.pricebar > div";
+  hiColumn =
+    "#inventory_container > div > div:nth-child(6) > div.inventory_item_description > div.pricebar > div";
 
   sauceLabsBackpack() {
     cy.contains(this.link_sauceLabsBackpack).click();
@@ -24,6 +30,12 @@ export class DashboardPage {
     } else if (selectSort == "za") {
       cy.get(this.lastColumn).contains("Sauce Labs Backpack");
       cy.get(this.firstColumn).contains("Test.allTheThings() T-Shirt (Red)");
+    } else if (selectSort == "lohi") {
+      cy.get(this.loColumn).contains("$7.99");
+      cy.get(this.hiColumn).contains("$49.99");
+    } else if (selectSort == "hilo") {
+      cy.get(this.hiColumn).contains("$7.99");
+      cy.get(this.loColumn).contains("$49.99");
     }
     // this.navigate(url)
     // this.inputUsername(username)
