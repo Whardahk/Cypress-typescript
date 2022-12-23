@@ -22,6 +22,9 @@ export class DashboardPage {
   cartBtn = "#shopping_cart_container > a";
   cartNumber = "#shopping_cart_container > a > span";
 
+  removeBackpack = "#remove-sauce-labs-backpack";
+  cartPage = "#cart_contents_container";
+
   sauceLabsBackpack() {
     cy.contains(this.link_sauceLabsBackpack).click();
     cy.contains("Sauce Labs Backpack").should("be.visible");
@@ -65,5 +68,11 @@ export class DashboardPage {
   checkCart(product: string) {
     cy.get(this.cartBtn).click();
     cy.contains(product);
+  }
+
+  //Remove product from Cart page
+  removeProduct(product: string) {
+    cy.get(this.removeBackpack).click();
+    cy.get(this.cartPage).should("not.have.text", product);
   }
 }

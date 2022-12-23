@@ -31,3 +31,11 @@ it("Test Sauce Demo Sauce labs Add Product to Cart", () => {
   dashboardPage.checkCart("Sauce Labs Backpack");
   dashboardPage.checkCart("Sauce Labs Onesie");
 });
+
+it("Test Sauce Demo Sauce labs Remove Product from Cart", () => {
+  loginPage.login(URL, "standard_user", "secret_sauce");
+  loginPage.assertLogin();
+  dashboardPage.addCart("Sauce Labs Backpack");
+  dashboardPage.checkCart("Sauce Labs Backpack");
+  dashboardPage.removeProduct("Sauce Labs Backpack");
+});
