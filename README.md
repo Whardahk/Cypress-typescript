@@ -29,3 +29,5 @@ npx cypress open
 Code Review: https://github.com/Whardahk/Cypress-typescript/blob/master/codeReview.txt
 
 Test case: https://docs.google.com/spreadsheets/d/1YRc8k2mV8VwMzcXgp1RFAUKBV1LQ1kzON8S9E_JaGss/edit?usp=sharing
+
+Video Recording: https://github.com/Whardahk/Cypress-typescript/tree/master/cypress/videos
