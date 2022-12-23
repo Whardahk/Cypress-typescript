@@ -16,9 +16,21 @@ export class DashboardPage {
   hiColumn =
     "#inventory_container > div > div:nth-child(6) > div.inventory_item_description > div.pricebar > div";
 
+  //Add to Cart
+  productOnesie = "#add-to-cart-sauce-labs-onesie";
+  productBackpack = "#add-to-cart-sauce-labs-backpack";
+  cartBtn = "#shopping_cart_container > a";
+  cartNumber = "#shopping_cart_container > a > span";
+
   sauceLabsBackpack() {
     cy.contains(this.link_sauceLabsBackpack).click();
     cy.contains("Sauce Labs Backpack").should("be.visible");
+  }
+
+  logout() {
+    cy.get(this.menuBtn).click();
+    cy.get(this.logoutBtn).click();
+    cy.contains("Accepted usernames are:").should("be.visible");
   }
 
   sorting(selectSort: string) {
@@ -37,15 +49,21 @@ export class DashboardPage {
       cy.get(this.hiColumn).contains("$7.99");
       cy.get(this.loColumn).contains("$49.99");
     }
-    // this.navigate(url)
-    // this.inputUsername(username)
-    // this.inputPassword(password)
-    // this.clickLogin()
   }
 
-  logout() {
-    cy.get(this.menuBtn).click();
-    cy.get(this.logoutBtn).click();
-    cy.contains("Accepted usernames are:").should("be.visible");
+  addCart(product: string) {
+    if (product == "Sauce Labs Backpack") {
+      cy.get(this.productBackpack).click();
+      cy.get(this.cartNumber).contains(1);
+    } else if (product == "Sauce Labs Onesie") {
+      cy.get(this.productOnesie).click();
+      cy.get(this.cartNumber).contains(2);
+    }
+  }
+
+  //Check on the Cart page
+  checkCart(product: string) {
+    cy.get(this.cartBtn).click();
+    cy.contains(product);
   }
 }

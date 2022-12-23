@@ -18,3 +18,16 @@ it("Test Sauce Demo Sauce labs sorting products", () => {
   //Sorting Price High to Low
   dashboardPage.sorting("hilo");
 });
+
+it("Test Sauce Demo Sauce labs Add Product to Cart", () => {
+  loginPage.login(URL, "standard_user", "secret_sauce");
+  loginPage.assertLogin();
+
+  //Add to cart Sauce Labs Onesie
+  dashboardPage.addCart("Sauce Labs Backpack");
+  dashboardPage.addCart("Sauce Labs Onesie");
+
+  //Check on the Cart Page
+  dashboardPage.checkCart("Sauce Labs Backpack");
+  dashboardPage.checkCart("Sauce Labs Onesie");
+});
