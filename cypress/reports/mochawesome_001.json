@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-23T15:24:53.824Z",
+    "end": "2022-12-23T15:24:59.577Z",
+    "duration": 5753,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5720bf56-0a2a-4abe-9606-5a7dfa99ab60",
+      "title": "",
+      "fullFile": "cypress/e2e/products.cy.ts",
+      "file": "cypress/e2e/products.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test Sauce Demo Sauce labs sorting products",
+          "fullTitle": "Test Sauce Demo Sauce labs sorting products",
+          "timedOut": null,
+          "duration": 1751,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, \"standard_user\", \"secret_sauce\");\nloginPage.assertLogin();\n//Sorting Name A to Z\ndashboardPage.sorting(\"az\");\n//Sorting Name Z to A\ndashboardPage.sorting(\"za\");\n//Sorting Price low to High\ndashboardPage.sorting(\"lohi\");\n//Sorting Price High to Low\ndashboardPage.sorting(\"hilo\");",
+          "err": {},
+          "uuid": "f7914797-00ac-4f69-a75d-a23534c93361",
+          "parentUUID": "5720bf56-0a2a-4abe-9606-5a7dfa99ab60",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Sauce labs Add Product to Cart",
+          "fullTitle": "Test Sauce Demo Sauce labs Add Product to Cart",
+          "timedOut": null,
+          "duration": 1446,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, \"standard_user\", \"secret_sauce\");\nloginPage.assertLogin();\n//Add to cart Sauce Labs Onesie\ndashboardPage.addCart(\"Sauce Labs Backpack\");\ndashboardPage.addCart(\"Sauce Labs Onesie\");\n//Check on the Cart Page\ndashboardPage.checkCart(\"Sauce Labs Backpack\");\ndashboardPage.checkCart(\"Sauce Labs Onesie\");",
+          "err": {},
+          "uuid": "41667b1a-531c-4f67-aa19-77a0146b860a",
+          "parentUUID": "5720bf56-0a2a-4abe-9606-5a7dfa99ab60",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Sauce labs Remove Product from Cart",
+          "fullTitle": "Test Sauce Demo Sauce labs Remove Product from Cart",
+          "timedOut": null,
+          "duration": 1423,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, \"standard_user\", \"secret_sauce\");\nloginPage.assertLogin();\ndashboardPage.addCart(\"Sauce Labs Backpack\");\ndashboardPage.checkCart(\"Sauce Labs Backpack\");\ndashboardPage.removeProduct(\"Sauce Labs Backpack\");",
+          "err": {},
+          "uuid": "096ae8ed-8e9f-49b2-b8e7-2c0301d11199",
+          "parentUUID": "5720bf56-0a2a-4abe-9606-5a7dfa99ab60",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "f7914797-00ac-4f69-a75d-a23534c93361",
+        "41667b1a-531c-4f67-aa19-77a0146b860a",
+        "096ae8ed-8e9f-49b2-b8e7-2c0301d11199"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 4620,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
