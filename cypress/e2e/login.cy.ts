@@ -20,3 +20,11 @@ it("Test Sauce Demo Sauce labs product backpack", () => {
   loginPage.assertLogin();
   dashboardPage.sauceLabsBackpack();
 });
+
+//LOGOUT
+it("Test LOGOUT", () => {
+  loginPage.login(URL, "standard_user", "secret_sauce");
+  loginPage.assertLogin();
+
+  dashboardPage.logout();
+});
