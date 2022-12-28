@@ -30,4 +30,4 @@ Code Review: https://github.com/Whardahk/Cypress-typescript/blob/master/codeRevi
 
 Test case: https://docs.google.com/spreadsheets/d/1YRc8k2mV8VwMzcXgp1RFAUKBV1LQ1kzON8S9E_JaGss/edit?usp=sharing
 
-Video Recording: https://github.com/Whardahk/Cypress-typescript/tree/master/cypress/videos
+Video Recording: https://drive.google.com/file/d/1_ewBSY7WjDGqyvSaw9K5nG_ehjOgKDU5/view?usp=sharing
